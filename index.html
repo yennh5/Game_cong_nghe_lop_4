@@ -63,7 +63,7 @@
         }
         .flashcard-back {
             background: linear-gradient(135deg, #4fc3f7, #29b6f6);
-            color: white;
+            color: black;
             transform: rotateY(180deg);
         }
 
@@ -180,7 +180,6 @@
                 <hr class="my-8 border-gray-200">
                 
                 <h3 class="text-2xl font-bold text-blue-500 mb-6">🧠 Góc Ôn Tập (Lật Thẻ)</h3>
-                <p class="text-slate-500 mb-4">Click vào thẻ để xem đáp án nhé!</p>
                 
                 <div id="flashcards-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     <!-- Flashcards injected here -->
@@ -198,15 +197,15 @@
         const questions = [
             // I. TRẮC NGHIỆM
             { type: 'mcq', text: "Câu 1: Có mấy cách để bón phân cho hoa, cây cảnh?", options: ["A. 2", "B. 3", "C. 4", "D. 5"], answer: 1 },
-            { type: 'mcq', text: "Câu 5: Chi tiết sau đây có tên gọi là gì?", img: "⚙️ (Hình bánh đai)", options: ["A. Bánh xe", "B. Bánh đai", "C. Ròng rọc", "D. Đai truyền"], answer: 1 },
-            { type: 'mcq', text: "Câu 6: Trục quay trong bộ lắp ghép mô hình kĩ thuật nằm trong nhóm chi tiết nào?", options: ["A. Nhóm hình tấm", "B. Nhóm hình thanh", "C. Nhóm chuyển động", "D. Nhóm kết nối"], answer: 3 },
+            { type: 'mcq', text: "Câu 5: Chi tiết sau đây có tên gọi là gì?", img: "⚙️", options: ["A. Bánh xe", "B. Bánh đai", "C. Ròng rọc", "D. Đai truyền"], answer: 1 },
+            { type: 'mcq', text: "Câu 6: Trục quay trong bộ lắp ghép mô hình kĩ thuật nằm trong nhóm chi tiết nào?", options: ["A. Nhóm chi tiết hình tấm", "B. Nhóm chi tiết hình thanh.", "C. Nhóm chi tiết chuyển động.", "D. Nhóm chi tiết kết nối."], answer: 3 },
             { type: 'mcq', text: "Câu 7: Mô hình bập bênh gồm mấy bộ phận chính?", options: ["A. 2", "B. 3", "C. 4", "D. 5"], answer: 1 },
             { type: 'mcq', text: "Câu 8: Bước 2 của quy trình lắp ghép mô hình bập bênh là:", options: ["A. Lắp chân đế", "B. Kiểm tra sản phẩm", "C. Hoàn thiện mô hình", "D. Lắp thanh đòn và ghế ngồi"], answer: 3 },
             { type: 'mcq', text: "Câu 9: Bước 1 của quy trình lắp ghép mô hình rô-bốt là:", options: ["A. Lắp đầu rô-bốt", "B. Lắp thân rô-bốt", "C. Lắp chân rô-bốt", "D. Hoàn thiện rô-bốt"], answer: 0 },
-            { type: 'mcq', text: "Câu 10: Một trong các yêu cầu đối với sản phẩm rô-bốt sau khi hoàn thiện là:", options: ["A. Đủ phần thân và chân", "B. Mối ghép có thể lỏng", "C. Đủ 35 chi tiết", "D. Chân rô-bốt chuyển động được"], answer: 3 },
+            { type: 'mcq', text: "Câu 10: Một trong các yêu cầu đối với sản phẩm rô-bốt sau khi hoàn thiện là:", options: ["A. Đủ phần thân rô-bốt và chân rô-bốt.", "B. Mối ghép đúng vị trí, có thể lỏng lẻo hoặc chắc chắn.", "C. Đủ 35 chi tiết, chia thành 4 nhóm.", "D. Chân rô-bốt chuyển động được."], answer: 3 },
             { type: 'mcq', text: "Câu 11: Đồ chơi dân gian được làm từ những vật liệu nào?", options: ["A. Nhựa", "B. Vật liệu dễ kiếm, gần gũi", "C. Gốm", "D. Kim loại"], answer: 1 },
-            { type: 'mcq', text: "Câu 12: Khi chơi đồ chơi dân gian, em cần phải chơi như thế nào?", options: ["A. Chơi an toàn", "B. Phù hợp lứa tuổi", "C. Ngăn nắp", "D. Tất cả các đáp án trên"], answer: 3 },
-            { type: 'mcq', text: "Câu 15: Bước hoàn thiện sản phẩm đèn lồng cần thực hiện gì?", options: ["A. Trang trí theo ý thích", "B. Trang trí xung quanh", "C. Kiểm tra độ chắc chắn", "D. Cả A và C đúng"], answer: 3 },
+            { type: 'mcq', text: "Câu 12: Khi chơi đồ chơi dân gian, em cần phải chơi như thế nào?", options: ["A. Chơi an toàn", "B. PChơi trò chơi dân gian phù hợp với lứa tuổi.", "C. Chơi ngăn nắp, gọn gàng.", "D. Tất cả các đáp án trên đều đúng."], answer: 3 },
+            { type: 'mcq', text: "Câu 15: Bước hoàn thiện sản phẩm đèn lồng cần thực hiện gì?", options: ["A. Dùng bút màu, giấy màu trang trí đèn lồng theo ý thích.", "B. Trang trí xung quanh đèn lồng.", "C. Kiểm tra độ chắc chắn của đèn lồng và điều chỉnh.", "D. Cả A và C đều đúng. "], answer: 3 },
             
             // III. CÂU HỎI NỐI (Chuyển thành Trắc nghiệm)
             { type: 'mcq', text: "Câu 3: Hình a (tưới gốc) tương ứng với cách bón phân nào?", options: ["A. Pha với nước và tưới vào gốc", "B. Phun lên lá", "C. Bón quanh gốc"], answer: 0 },
@@ -251,9 +250,10 @@
         ];
 
         const flashcardsData = [
-            { front: "Trình tự lắp ghép mô hình kĩ thuật?", back: "Bước 1: Lựa chọn chi tiết<br>Bước 2: Lắp ghép mẫu<br>Bước 3: Giới thiệu sản phẩm<br>Bước 4: Tháo dọn" },
-            { front: "Lưu ý khi tưới nước cho hoa, cây cảnh?", back: "Tưới đủ nước, dùng bình tưới phù hợp, tưới định kì." },
-            { front: "Ứng dụng rô-bốt thông minh?", back: "Dọn dẹp nhà, điều khiển máy, chăm sóc bệnh nhân, thu hoạch quả..." }
+            { front: "Em hãy nêu trình tự lắp ghép mô hình kĩ thuật?", back: "Bước 1: Lựa chọn chi tiết và dụng cụ.<br>Bước 2: Lắp ghép theo mẫu.<br>Bước 3: Giới thiệu và nhận xét sản phẩm.<br>Bước 4: Tháo và cất dọn đồ dùng." },
+            { front: "Em hãy nêu một vài lưu ý khi tưới nước cho hoa, cây cảnh.", back: "Hoa, cây cảnh cần được tưới đủ nước, nếu thiếu hoặc thừa nước sẽ ảnh hưởng đến sự sống và phát triển của cây.Dùng bình tưới cây hoặc dụng cụ phù hợp tưới nhẹ, đều và đủ ẩm toàn bộ phần giá thể trong chậu.Tưới nước định kì phù hợp cho từng loại cây." },
+            { front: "Hãy nêu một số ứng dụng của rô-bốt thông minh trong cuộc sống hiện đại.", back: "Những ứng dụng của rô-bốt trong cuộc sống hiện đại là: Dọn dẹp nhà cửa, điều khiển máy móc, chăm sóc người bệnh, thu hoạch hoa quả, ..." },
+            { front: "Hãy nêu một số ứng dụng của rô-bốt thông minh trong cuộc sống hiện đại.", back: " Những ứng dụng của rô-bốt trong cuộc sống hiện đại là: Dọn dẹp nhà cửa, điều khiển máy móc, chăm sóc người bệnh, thu hoạch hoa quả, ..." }
         ];
 
         // --- GAME STATE ---
@@ -518,7 +518,7 @@
             fcContainer.innerHTML = '';
             flashcardsData.forEach(fc => {
                 const card = document.createElement('div');
-                card.className = 'flashcard-container h-48 w-full';
+                card.className = 'flashcard-container min-h-[12rem] w-full mb-4';
                 card.innerHTML = `
                     <div class="flashcard relative w-full h-full shadow-lg rounded-2xl" onclick="this.classList.toggle('is-flipped')">
                         <div class="flashcard-face flashcard-front text-lg font-bold">
